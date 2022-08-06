@@ -18,13 +18,31 @@ contract Pay_Rent {
         owner = payable(msg.sender);
         currentStatus = Status.Due;
     }
+    
+    // We will use node to get the current value of 
+    //ethusd get a free service cloudfair
+    
+    // Variable below for different markets
+const rpcURL = 'https://cloudflare-eth.com/'
+const provider = new ethers.providers.JsonRpcProvider(rpcURL)
+
+// Get new Token Address
+const CONTRACT_ADDRESS = '0xdAC17F958D2ee523a2206206994597C13D831ec7' // USDC
+    
+    
+    
+    
+    
+    /// Above is grabbing data...
 
     modifier RentisDue() {
-        require(currentStatus == Status.Due, "Currently occupied.");
+        require(currentStatus == Status.Due, "Rent is due.");
         _;
     }
 
     modifier costs(uint256 _amount) {
+    
+    
         require(msg.value >= _amount, "Not enough Ether provided.");
         _;
     }
