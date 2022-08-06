@@ -4,6 +4,10 @@
     
   </head>  
   <body>
+  <img width="100%" src="/btjackson-usgs/Pay_Rent/blob/main/fake-banner.PNG?raw=true" alt="fake-banner.PNG">
+    
+    
+    
     
     <form name=form1>
       <table><tr>
